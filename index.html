@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire</title>
+</head>
+<body>
+    <h1>Nous contacter</h1>
+
+    <section>
+        <h2>Vos informations</h2>
+        <form action="submit-form.php" method="post">
+            <label for="name">Nom*</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Adresse mail*</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Numéro de téléphone</label>
+            <input type="tel" id="phone" name="phone">
+
+            <fieldset>
+                <legend>Situation</legend>
+                <input type="radio" id="job-seeker" name="situation" value="demandeur-emploi" required>
+                <label for="job-seeker">Demandeur d'emploi</label><br>
+
+                <input type="radio" id="career-transition" name="situation" value="salarié-transition" required>
+                <label for="career-transition">Salarié en transition professionnelle</label><br>
+
+                <input type="radio" id="other-situation" name="situation" value="autre" required>
+                <label for="other-situation">Autre</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Modalités d'apprentissage</legend>
+                <input type="radio" id="in-person" name="learning-mode" value="en-centre" required>
+                <label for="in-person">En centre de formation (présentiel)</label><br>
+
+                <input type="radio" id="distance" name="learning-mode" value="100%-distance" required>
+                <label for="distance">100 % à distance</label><br>
+
+                <input type="radio" id="apprenticeship" name="learning-mode" value="en-alternance" required>
+                <label for="apprenticeship">En contrat d'alternance avec l'entreprise</label><br>
+
+                <input type="radio" id="no-preference" name="learning-mode" value="sans-préférence" required>
+                <label for="no-preference">Sans préférence</label>
+            </fieldset>
+
+            <label for="region">Région d'origine</label>
+            <select id="region" name="region">
+                <option value="auvergne-rhone-alpes">Auvergne-Rhône-Alpes</option>
+                <option value="bourgogne-franche-comte">Bourgogne-Franche-Comté</option>
+                <option value="bretagne">Bretagne</option>
+                <option value="centre-val-de-loire">Centre-Val de Loire</option>
+                <option value="corse">Corse</option>
+                <option value="grand-est">Grand Est</option>
+                <option value="hauts-de-france">Hauts-de-France</option>
+                <option value="ile-de-france">Île-de-France</option>
+                <option value="normandie">Normandie</option>
+                <option value="nouvelle-aquitaine">Nouvelle-Aquitaine</option>
+                <option value="occitanie">Occitanie</option>
+                <option value="pays-de-la-loire">Pays de la Loire</option>
+                <option value="provence-alpes-cote-d-azur">Provence-Alpes-Côte d'Azur</option>
+            </select>
+
+            <input type="submit" value="Envoyer">
+
+        </form>
+
+
+
+    </section>
+
+</body>
+</html>
