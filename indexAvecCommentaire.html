@@ -1,3 +1,18 @@
+<!-- 
+    Erreurs féquentes : 
+        Pas besoin de plusieurs feuilles de styles css
+        Pas de majuscules aux noms de fichiers
+        Pas de lang défini
+        Créer des sous dossiers
+        
+        oubli des labels
+        Form missing fieldset and legend to group multiple radio buttons.
+        erreur dans le type texte != text
+        Absence de balise alt dans les images
+ -->
+
+
+
 <!DOCTYPE html>
 <html lang="fr"> <!-- Balise principale qui contient tout le code HTML -->
 <head>
@@ -17,6 +32,14 @@
             <label for="name">Nom*</label>
             <input type="text" id="name" name="name" required>
 
+            <!-- La balise "input" est utilisée pour créer un champ de saisie de données interactif sur une page web, tel qu'un champ de saisie de texte, une case à cocher, un bouton radio ou une liste déroulante. L'attribut "id" de la balise "input" est utilisé pour identifier le champ de saisie.
+
+            La balise "label" est utilisée pour fournir une étiquette descriptive pour un champ de saisie. L'attribut "for" de la balise "label" est utilisé pour lier l'étiquette à l'élément "input" associé via l'attribut "id".
+
+            Lorsqu'un utilisateur clique sur l'étiquette, le focus est automatiquement dirigé vers le champ de saisie associé. Cela facilite la saisie des données pour les utilisateurs, car ils peuvent cliquer sur l'étiquette pour accéder directement au champ de saisie plutôt que de devoir cliquer sur le champ de saisie lui-même.
+
+            Dans cet exemple, l'attribut "for" de la balise "label" est défini sur "nom", qui est également la valeur de l'attribut "id" de la balise "input". Cela lie l'étiquette "Nom :" au champ de saisie de texte, ce qui permet aux utilisateurs de cliquer sur l'étiquette pour accéder directement au champ de saisie.
+ -->
             <label for="email">Adresse mail*</label>
             <input type="email" id="email" name="email" required>
 
@@ -26,6 +49,18 @@
             <!-- Groupe de boutons radio pour la situation -->
             <fieldset>
                 <legend>Situation</legend> <!-- Titre du groupe de boutons radio -->
+<!-- 
+                L'élément "fieldset" est utilisé pour grouper des éléments de formulaire associés dans une section logique. Par exemple, si vous avez plusieurs champs de saisie de données qui appartiennent à une même section, vous pouvez les grouper avec l'élément "fieldset".
+
+                L'élément "legend" est utilisé pour fournir une description légendaire à l'élément "fieldset". L'élément "legend" doit être placé immédiatement après l'élément "fieldset".
+
+                Dans cet exemple, l'élément "fieldset" est utilisé pour grouper les champs de saisie de données liés aux informations personnelles. L'élément "legend" est utilisé pour fournir une description légendaire à l'élément "fieldset".
+
+                L'importance des éléments "fieldset" et "legend" en matière d'accessibilité réside dans le fait qu'ils aident les utilisateurs de technologies d'assistance, tels que les lecteurs d'écran, à comprendre la structure logique des formulaires. Les lecteurs d'écran peuvent lire l'élément "legend" avant de lire les éléments "input" du "fieldset", ce qui aide les utilisateurs à comprendre de quel groupe d'options il s'agit. Les éléments "fieldset" et "legend" peuvent également aider les utilisateurs à naviguer plus facilement dans les formulaires en sautant les groupes d'options qui ne les intéressent pas.
+
+                En résumé, l'utilisation des éléments "fieldset" et "legend" en HTML peut aider à améliorer l'accessibilité des formulaires en aidant les utilisateurs de technologies d'assistance à comprendre la structure logique des formulaires et à naviguer plus facilement dans les formulaires.
+ -->
+
                 <input type="radio" id="job-seeker" name="situation" value="demandeur-emploi" required>
                 <label for="job-seeker">Demandeur d'emploi</label><br>
 
@@ -34,6 +69,15 @@
 
                 <input type="radio" id="other-situation" name="situation" value="autre" required>
                 <label for="other-situation">Autre</label>
+
+                <!-- Les boutons radio (ou boutons d'options) sont utilisés pour permettre aux utilisateurs de sélectionner une option parmi plusieurs choix exclusifs. Seule une option peut être sélectionnée à la fois. Chaque bouton radio est associé à un élément "input" de type "radio".
+
+                Dans cet exemple, chaque bouton radio est associé à une étiquette "label" pour une meilleure accessibilité et une meilleure expérience utilisateur. Chaque bouton radio a un attribut "id" unique qui est lié à l'attribut "for" de l'étiquette correspondante. Les boutons radio ont également un attribut "name" commun, ce qui indique qu'ils font partie du même groupe d'options.
+
+                L'attribut "value" de chaque bouton radio définit la valeur qui sera soumise au serveur lorsque l'utilisateur sélectionne une option. Lorsqu'un utilisateur sélectionne une option, seule l'élément "input" correspondant au bouton radio sélectionné est soumis avec la valeur sélectionnée.
+
+                En résumé, les boutons radio sont utilisés pour créer un groupe d'options exclusives où une seule option peut être sélectionnée à la fois. Chaque bouton radio est associé à un élément "input" de type "radio" et a un attribut "name" commun pour identifier le groupe d'options. Lorsqu'un utilisateur sélectionne une option, seule l'élément "input" correspondant au bouton radio sélectionné est soumis avec la valeur sélectionnée. -->
+
             </fieldset>
 
             <!-- Groupe de boutons radio pour les modalités d'apprentissage -->
@@ -69,6 +113,14 @@
             <option value="pays-de-la-loire">Pays de la Loire</option>
             <option value="provence-alpes-cote-d-azur">Provence-Alpes-Côte d'Azur</option>
         </select>
+
+        <!-- Une liste déroulante est un élément HTML qui permet à l'utilisateur de sélectionner une option à partir d'une liste d'options prédéfinies. Les listes déroulantes sont créées en utilisant l'élément "select" en HTML.
+
+        Dans cet exemple, l'élément "select" crée la liste déroulante, tandis que chaque option de la liste est créée avec l'élément "option". L'attribut "value" de chaque option définit la valeur qui sera soumise au serveur lorsque l'utilisateur sélectionne une option. Le texte entre les balises "option" est affiché dans la liste déroulante.
+
+        L'attribut "id" de l'élément "select" est utilisé pour identifier la liste déroulante, tandis que l'attribut "name" est utilisé pour identifier la liste déroulante lorsqu'elle est soumise avec le formulaire.
+
+        En général, les listes déroulantes sont utilisées pour limiter les choix possibles à partir d'une liste d'options prédéfinies, ce qui peut aider à réduire les erreurs de saisie de données. Les listes déroulantes peuvent également être utilisées pour économiser de l'espace sur la page, car elles ne prennent pas autant de place qu'une liste de boutons radio ou de cases à cocher. -->
 
         <input type="submit" value="Envoyer"> <!-- Bouton de soumission du formulaire -->
 
